@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #box{
+            display: flex;
+            background-color: chartreuse;
+            width: 40%;
+            border-radius: 10px;
+            padding: 10px;
+            justify-content: left;
+            flex-direction: column;
+            text-align: center;
+        }
+    </style>
+</head>
+<body style = "text-align: center; display: flex; justify-content: center;">
+    <div id = "box" style = "margin: 10px; padding: 20px;">
+        <h1>Login Area Riservata</h1>
+        <p1>Username</p1>
+        <input type = "text" onchange = "control()">
+        <p2>età</p2>
+        <input type = "text" onchange = "control()">
+        <div>
+        <input type="checkbox">
+        <label for="vehicle1"> Acconsento</label><br>
+        </div>
+        <div>
+        <input type="checkbox">
+        <label for="vehicle2"> Non acconsento</label><br>
+        </div>
+        <p2>password</p2>
+        <input type = "text" onchange = "control()">
+        <script src="./index.js"></script>
+        <button>Login</button>
+    </div>
+</body>
+</html>

@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <style>
-        #box{
+        #box {
             display: flex;
             background-color: chartreuse;
             width: 40%;
             border-radius: 10px;
-            padding: 10px;
-            justify-content: left;
+            padding: 20px;
             flex-direction: column;
             text-align: center;
         }
+
     </style>
 </head>
-<body style = "text-align: center; display: flex; justify-content: center;">
-    <div id = "box" style = "margin: 10px; padding: 20px;">
+
+<body style="display: flex; justify-content: center; text-align: center;">
+    <form id="box" onsubmit="return controlloFinale()">
         <h1>Login Area Riservata</h1>
-        <p1>Username</p1>
-        <div id = "warn"></div>
-        <input type = "text" id = "username" onsubmit= "control()">
-        <p2>età</p2>
-        <input type = "text" id = "eta" onsubmit= "control()">
-        <div>
-        <input type="checkbox">
-        <label> Acconsento</label><br>
-        </div>
-        <div>
-        <input type="checkbox">
-        <label> Non acconsento</label><br>
-        </div>
-        <p2>password</p2>
-        <input type = "text" id = "password" onsubmit= "control()">
-        <script src="./index.js"></script>
-        <button>Login</button>
-    </div>
+
+        <label>Username</label>
+        <input type="text" id="username" oninput="control_username()">
+        <div id="warnUsername" class="errore"></div>
+
+        <label>Età</label>
+        <input type="text" id="eta" oninput="control_eta()">
+        <div id="warnEta" class="errore"></div>
+
+        <label>Password</label>
+        <input type="password" id="password" oninput="control_password()">
+        <div id="warnPassword" class="errore"></div>
+
+        <label>
+            <input type="checkbox" id="consenso">
+            Acconsento
+        </label>
+        <div id="warnConsenso" class="errore"></div>
+
+        <button type="submit">Login</button>
+
+        <div id="erroriFinali" class="errore"></div>
+        <div id="successo" style="color:green;"></div>
+    </form>
+
+    <script src="index.js"></script>
 </body>
 </html>
